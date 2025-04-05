@@ -1,7 +1,18 @@
-const Focus = () => {
+import { useNavigate } from "react-router-dom"
+import Timer from "../Compenent/Timer"
+
+   const Focus = () => {
+       const navigate = useNavigate();
+        const handleClick = ()=> {
+            navigate("/success")
+        }
+    
+
   return (
-    <div className="bg-black text-white w-full h-screen">
-      csscjvsdfjpo Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore ullam vero aspernatur nihil similique repudiandae qui expedita delectus, pariatur reiciendis. Temporibus molestiae voluptate ex error quam sunt distinctio voluptati
+    <div className="bg-gray-400 text-white flex justify-center w-full h-screen">
+        <div className="flex items-center">
+        <Timer initialTimer = {2} onComplete={handleClick}/>
+        </div>
     </div>
   )
 }

@@ -11,7 +11,7 @@ const NavBar = () => {
         to="/">
             Home
         </NavLink>
-        <NavLink to="/focus">
+        <NavLink to="/focusMode">
             FocusMode
         </NavLink>
         <NavLink to="/success">
