@@ -33,22 +33,39 @@ const Timer = ({initialTimer, onComplete}) => {
   };
 
 
-  return <div>
-    <h1 className="text-center">
+  return (
+    <div className="flex justify-center items-center w-screen h-screen bg-gradient-to-r from-blue-500 to-purple-600">
+    <div className="bg-white p-10 rounded-xl shadow-2xl w-100">
+      <h1 className="text-6xl font-semibold text-center text-gray-800 mb-8">
         {formatTime(timeLeft)}
-    {console.log("initial timer", initialTimer)}
-    </h1>
-    <div className="flex gap-2 mt-5">
-        <button className="bg-blue-600 p-2 rounded-md" onClick={()=> setIsRunning(true)}>Start</button>
-        <button className="bg-blue-600 p-2 rounded-md" onClick={()=> setIsRunning(false)}>Pasue</button>
-        <button className="bg-blue-600 p-2 rounded-md" onClick={()=> {
-            setIsRunning(false)
-            setTimeLeft(initialTimer)
-       }}>Reset
-        </button>
-    </div>
-  </div>;
+      </h1>
 
+      <div className="flex justify-center mb-6 gap-2">
+        <button
+          onClick={() => setIsRunning(true)}
+          className="bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
+        >
+          Start
+        </button>
+        <button
+          onClick={() => setIsRunning(false)}
+          className="bg-yellow-500 hover:bg-yellow-600 text-white py-3 px-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
+        >
+          Pause
+        </button>
+        <button
+          onClick={() => {
+            setIsRunning(false);
+            setTimeLeft(initialTimer);
+          }}
+          className="bg-red-500 hover:bg-red-600 text-white py-3 px-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+  </div>
+);
 };
 
 export default Timer;
