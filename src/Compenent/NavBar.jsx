@@ -2,30 +2,25 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav className="bg-gradient-to-r from-blue-500 to-purple-600 p-4 shadow-lg">
+    <nav className="bg-gradient-to-r from-blue-500 to-purple-600 p-6 shadow-lg">
       <div className="max-w-screen-xl mx-auto flex items-center justify-between">
-        {/* Title */}
-        <h1 className="text-3xl font-semibold text-white">FocusZen</h1>
+        
+        {/* Logo or Title */}
+        <h1 className="text-4xl font-extrabold text-white">FocusZen</h1>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex space-x-8">
+        <div className="space-x-8">
           <NavLink
             to="/"
-            className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300"
+            className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500"
           >
             Home
           </NavLink>
           <NavLink
             to="/focusMode"
-            className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300"
+            className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-500"
           >
             FocusMode
-          </NavLink>
-          <NavLink
-            to="/success"
-            className="text-white text-lg font-medium hover:text-yellow-400 transition duration-300"
-          >
-            Success
           </NavLink>
         </div>
       </div>
