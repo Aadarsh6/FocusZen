@@ -1,18 +1,26 @@
-import { Link } from "react-router-dom"
-import NavBar from "../Compenent/NavBar"
+import { Link } from "react-router-dom";
+import NavBar from "../Component/NavBar";
 
 const Home = () => {
   return (
     <>
-    <NavBar/>
-    <div className="h-screen flex flex-col justify-center items-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to FocusZen</h1>
-        <Link to="/focusMode" className="bg-blue-600 px-6 py-3 hover:scale-125 transform ease-in-out transition duration-200 text-white font-medium hover:bg-blue-500 rounded-md">
-            Start Session
+      <NavBar />
+      <div className="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-[#f3e5f5] via-[#d1c4e9] to-[#f8bbd0] text-gray-800">
+        <h1 className="text-5xl font-extrabold text-gray-800 mb-6 drop-shadow-md">
+          Welcome to FocusZen
+        </h1>
+        <p className="text-lg text-gray-700 font-light max-w-lg text-center mb-8">
+          Focus on what matters and achieve your goals with ease. Begin your journey with FocusZen now!
+        </p>
+        <Link 
+          to="/focusMode" 
+          className="bg-gradient-to-r from-[#8e24aa] to-[#ff4081] px-8 py-4 text-2xl font-semibold text-white rounded-lg transform hover:scale-105 hover:shadow-md transition duration-300 ease-in-out"
+        >
+          Start Session
         </Link>
-    </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

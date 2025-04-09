@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Timer = ({ initialTimer, onComplete }) => {
   const [timeLeft, setTimeLeft] = useState(initialTimer);
@@ -41,12 +42,13 @@ const Timer = ({ initialTimer, onComplete }) => {
           >
             Start
           </button>
-          <button
+          <Link
             onClick={() => setIsRunning(false)}
+            to="/type"
             className="bg-yellow-500 hover:bg-yellow-600 text-white py-4 px-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 focus:outline-none focus:ring-4 focus:ring-yellow-500"
           >
             Pause
-          </button>
+          </Link>
           <button
             onClick={() => {
               setIsRunning(false);
